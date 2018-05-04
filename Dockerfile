@@ -2,6 +2,8 @@ FROM jupyter/scipy-notebook
 
 MAINTAINER Albert Climent Bigas <albert.climent@pervasive-tech.com>
 
+RUN conda update -n base conda
+
 # Install Python 3 Tensorflow
 RUN conda install --quiet --yes 'tensorflow=1.4'
 RUN conda install --quiet --yes 'flask=0.12.2'
